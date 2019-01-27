@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string convert(int a){
+string convert(long long int a){
 	if(a == 10) return "A";
 	else if(a == 11) return "B";
 	else if(a == 12) return "C";
@@ -13,16 +13,19 @@ string convert(int a){
 }
 
 int main(){
-	long long int v, v1;
+	unsigned long long int v, v1;
 	string s = "";
 	
 	cin >> v;
 	
-	while(v > 16){
-		v1 = v % 16;
+	while(v >= 16){
+		s = convert(v % 16) + s;
 		v = v / 16;
-		s += convert(v1);
 	} 
-	s = convert(v)+s;
+	if (s != " ")
+		s = convert(v)+s;
+	else
+		s = convert(v);
+	
 	cout << s << endl;
 }
