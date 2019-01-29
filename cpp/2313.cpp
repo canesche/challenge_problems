@@ -10,7 +10,7 @@ int main() {
 
     cin >> a >> b >> c;
 
-    if(a < b + c || b < a + c || c < a + b){
+    if((a >= b + c && a >= abs(b-c)) || (b >= a + c && b >= abs(a-c)) || (c >= a + b && c >= abs(a-b))){
         cout << "Invalido" << endl;
     } else {
         if(a != b && a != c && b != c)
