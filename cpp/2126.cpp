@@ -18,12 +18,11 @@ int main() {
 
         pos = -1;
         count = 0;
-        eh = true;
         for(int i = 0; i < n2.size(); i++){
+            eh = true;
             if(n1[0] == n2[i]){
-                //cout << n1[0] << " " << n2[i] << endl;
                 for(int j = 1; j < n1.size(); j++){
-                    if(n1[j] != n2[i+j]){ // i+j > n2.size() && 
+                    if(n1[j] != n2[i+j]){
                         eh = false;
                         break;
                     }
