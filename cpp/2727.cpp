@@ -26,9 +26,10 @@ void imprime(string s){
     else if(s == ".. .. .. .. .. .. ..") cout << "t" << endl;
     else if(s == "... ... ... ... ... ... ...") cout << "u" << endl;
     else if(s == ". . . . . . . .") cout << "v" << endl;
-    else if(s == ".. .. .. .. .. .. .. ..") cout << "x" << endl;
-    else if(s == "... ... ... ... ... ... ... ...") cout << "y" << endl;
-    else if(s == ". . . . . . . . .") cout << "z" << endl;
+    else if(s == ".. .. .. .. .. .. .. ..") cout << "w" << endl;
+    else if(s == "... ... ... ... ... ... ... ...") cout << "x" << endl;
+    else if(s == ". . . . . . . . .") cout << "y" << endl;
+    else if(s == ".. .. .. .. .. .. .. .. ..") cout << "z" << endl;
 }
 
 int main() {
@@ -37,10 +38,14 @@ int main() {
     string s;
 
     while(cin >> n){
+        cin.ignore();
         for(int i = 0; i < n; i++){
             getline(cin, s);
+            
             imprime(s);
         }
+
+        //cin.ignore();
     }
     return 0;
 }
