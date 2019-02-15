@@ -1,3 +1,4 @@
+// ainda pensando
 #include <iostream>
 
 using namespace std;
