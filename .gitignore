@@ -1,6 +1,11 @@
 #Executables C++
 cpp/*.out
 cpp/*.exe
+#Executables C
+c/*.out
+c/*.exe
+#Executables Java
+java/*.class
 # VS code
 .vscode
 cpp/.vscode
