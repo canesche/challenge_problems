@@ -10,13 +10,11 @@ int main() {
 
     cin >> v >> n;
 
-    float p = v * n;
+    int p = v * n;
 
-    const float meta[9] = {0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9};
-
-    for (int i = 0; i < 9; ++i) {
-        cout << ceil(meta[i]*p);
-        if (i == 8) cout << endl;
+    for (int i = 1; i < 10; ++i) {
+        cout << ceil(0.1*i*p);
+        if (i == 9) cout << endl;
         else cout << " ";
     } 
 }
