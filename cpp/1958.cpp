@@ -10,7 +10,7 @@ int main() {
 
     int ponto = 0;
     for (int i = 0; i < s.size(); ++i) {
-
+        if (s[i] == '.') 
     }
 
     return 0;
