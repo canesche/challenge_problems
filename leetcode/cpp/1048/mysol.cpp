@@ -1,3 +1,8 @@
+/*
+    Time complexity: O(nlogn + n*|w|*|w|)
+    Space complexity: O(n*|w|)
+*/
+
 class Solution {
 public:
     int longestStrChain(vector<string>& words) {
@@ -13,7 +18,7 @@ public:
             for (int i = 0, n = w.size(); i < n; ++i) {
                 pred = w.substr(0,i) + w.substr(i+1);
                 if (dp.find(pred) != dp.end()) {
-                    dp[w] = dp[pred] + 1;
+                    dp[w] = max(dp[w], dp[pred] + 1);
                     r = max(dp[w], r);
                 }
             }
